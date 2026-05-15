@@ -163,7 +163,7 @@ El proyecto fue desarrollado para practicar:
 # 📂 Estructura del proyecto
 
 ```bash
-VotaMX/
+SistemaVotacionesElectronias/
 │
 ├── app/
 │   ├── views/
@@ -203,7 +203,7 @@ VotaMX/
 ## 1️⃣ Clonar repositorio
 
 ```bash
-git clone https://github.com/usuario/votamx.git
+git clone https://github.com/isairey/SistemaVotacionesElectronias.git
 ```
 
 ---
@@ -211,7 +211,7 @@ git clone https://github.com/usuario/votamx.git
 ## 2️⃣ Entrar al proyecto
 
 ```bash
-cd votamx
+cd SistemaVotacionesElectronias
 ```
 
 ---
@@ -402,7 +402,7 @@ git push origin feature/nueva-funcionalidad
 
 <div align="center">
 
-## VotaMX — Plataforma de votaciones electrónicas
+## Isai Reyes — Plataforma de votaciones electrónicas
 
 Sistema desarrollado para la administración moderna de procesos electorales digitales 🇲🇽
 
