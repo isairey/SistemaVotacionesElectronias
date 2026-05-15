@@ -1,133 +1,431 @@
-# Votaciones
-Sistema Para realizar votaciones electronicas
-Para Suhbir Cabios sigan estos sencillos paso:
-	+git status
-	+git add *
-	+git commit -m "mensaje"
-	+git pull /*para descargar si es que hay algun cambio*/
-	+git merge /*si es que hay cambios*/
-	+git push
+<div align="center">
 
-Mensaje:  
-    Modifiqué el script de la base de datos, vuélvanlo a correr.
+<img width="220" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
 
-        "mysql -u root -p < DBSistema.sql"
+# 🗳️ VotaMX
 
-    Después de que corran esa linea van a ir a la siguiente ruta.
-                    "/crearunusuario"
-    Esto creará un usuario, de username administrador y pw '123456'
-    Para revisar qué el logueo de prueba este bien, abren la ruta
+### Sistema de votaciones electrónicas y gestión electoral 🚀
 
-        "/getlogueo"
+<p align="center">
+  <b>VotaMX</b> es una plataforma web diseñada para la administración de procesos electorales, votaciones electrónicas y control de jornadas electorales mediante una interfaz moderna, segura y organizada.
+</p>
 
-Si todo es correcto los llevará a otra vista donde podrán cerrar sesion. 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<p align="center">
+  <img src="https://img.shields.io/badge/Sistema-Votaciones-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/PHP-Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white">
+  <img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+  <img src="https://img.shields.io/badge/Security-Electoral-blue?style=for-the-badge">
+</p>
 
-Cambios 11 de febrero {Alan}
-    
-    Arreglado un problema al incrustar javascript, si necesitan agregar un 'js' a su vista lo pueden hacer de la siguiente manera.
+<p align="center">
+  <a href="#-acerca-del-proyecto">Acerca</a> •
+  <a href="#-características">Características</a> •
+  <a href="#-tecnologías-utilizadas">Tecnologías</a> •
+  <a href="#-instalación">Instalación</a> •
+  <a href="#-roadmap">Roadmap</a>
+</p>
 
-![alt tag](https://github.com/positr0nix/Votaciones/blob/beta/ejemplojs.png)
+</div>
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cambios 10 de febrero  {Alan}
-En la carpeta views se agregaron la siguientes carpetas
+---
 
-views --+
+# 🌌 Acerca del proyecto
 
-        +->administrador
+**VotaMX** es un sistema web enfocado en la realización de votaciones electrónicas y administración de procesos electorales digitales.
 
-        +->funcionariosdecasilla
-        
-        +->reportes
-        
-        +->votante
-Descripción de cada carpeta para que agreguen las vistas. Entre parentesis les describo que es lo que se va a mostrar a cada una. Revisen el modelo ER para saber que campos van a agregar. id,created_ad y updated_ad ignorenlos no los incluyan en sus vistas. {{ Si el archivo no existe, creenlo porfavor. }}
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+La plataforma permite:
 
-administrador-+
-            
-            +->indexadminstrador.php 
-                (pagina principal de el administrador esta vista se mostrara despues de loguear)
-            +->nuevajornada.blade.php
-                (formulario para crear una jornada)
-            +->nuevolugar.blade.php
-                (formulario para agregar un lugar)
-            +->nuevacasilla.blade.php
-                (formulario para crear una casilla, este es de los mas importantes recuerden que el formulario debe llevar dos "select" uno para elegir el lugar de la casilla y otro para elegir la jornada)
-            +->nuevopartido.blade.php
-                (formulario para crear un partido, recuerden incluir un campo file para su imagen)
-            +->nuevocandidato.blade.php
-                (formulario para crear un nuevocandidato)
-            +->nuevofuncionario.blade.php
-                (formulario para crear un funcionario de casilla recuerden incluir un campo "select para elegir la casilla a la cual será asignado el funcionario")
-            +->vercandidatos.blade.php //Esta vista dejenla para después.
-                (tabla para ver los candidatos actuales)
-            +->vercasillas.blade.php   //Esta vista dejenla para después.
-                (tabla para ver las casillas actuales)
-            +->verfuncionarios.blade.php //Esta vista dejenla para después.
-                (tabla para ver funcionarios actuales)
+- 🗳️ Registro de votaciones
+- 👥 Gestión de votantes
+- 🏢 Administración de casillas
+- 🧑‍💼 Gestión de funcionarios
+- 🏛️ Administración de partidos políticos
+- 📊 Reportes electorales
+- 🔐 Control de acceso y autenticación
+- 📋 Gestión de jornadas electorales
 
+El proyecto fue desarrollado para practicar:
 
-funcionariodecasilla-+
+- Desarrollo web con Laravel
+- Bases de datos relacionales
+- Arquitectura MVC
+- Sistemas de autenticación
+- Seguridad informática
+- Procesos electorales digitales
 
-            +->loginfuncionariodecasilla
-                    (pagina inicial del sistema en el dia de las votaciones)
-            +->
+---
 
-votante-------+
+# ✨ Características
 
-            +->introducirclaveelector.blade.php
-                (formulario para que el votante introduzca su clave de elector)
-            +->vercandidatos.blade.php
-                (ver los candidatos que tiene para votar, recuerden incluir una imagen que seria la del partido.)
-            +->agradecimiento.blade.php
-                (Vista que muestre que el voto se realizo correctamente)
+## 🗳️ Sistema de votaciones
 
-reportes------+
-            +->
+- 🧾 Registro electrónico de votos
+- 🔐 Validación de votantes
+- ⚡ Proceso rápido de votación
+- 📊 Conteo automatizado
+- 🏛️ Gestión electoral
 
+---
 
-Lineas para crear el usuario y asignarlo a la base de datos
-    
-    CREATE USER 'seguridad'@'localhost' IDENTIFIED BY 'seguridad';
-    
-    GRANT ALL PRIVILEGES ON DBSistema . * TO 'seguridad'@'localhost';
+## 👥 Gestión de usuarios
 
+- 👨‍💼 Administradores
+- 🧑 Funcionarios de casilla
+- 🗳️ Votantes
+- 🔑 Inicio de sesión
+- 🛡️ Control de permisos
 
-8 de febrero 2016 8:36 p.m
-Agregue los css y js a la carpeta public.
-Hice una carpeta layouts en "Votaciones/appvotaciones/app/views/layouts", dentro de esta carpeta va un archivo "layoutbase.blade.php" heredenlo a cualquier vista que hagan, para hacer esto dentro de la vista que hagan colocan lo siguiente:
+---
 
-    @extends('layouts.layoutbase')  
-    @section('body')  
-        //Aquí va todo su HTML
-    @endsection
+## 🏛️ Administración electoral
 
-    @section('css')
-        //Aquí sus estilos css
-    @endsection  
-    
+- 📅 Jornadas electorales
+- 📍 Lugares de votación
+- 🏢 Casillas
+- 🧑‍💼 Funcionarios
+- 🏷️ Partidos políticos
+- 👤 Candidatos
 
-    @section('javascript')
-        //Aquí van su código javascript
-    @endsection
+---
 
+## 📊 Reportes
 
-Con esto obtendrán la plantilla y no tendrán que incluir bootstrap.
-Todo su HTML debe estar dentro de @section('body') y @endsection
+- 📈 Estadísticas electorales
+- 📋 Resultados de votación
+- 🧾 Reportes administrativos
+- 🗂️ Gestión de información
+- 📄 Exportación de datos
 
+---
 
------ IRVIN 14 febrero ----
-Agregada la ruta /administrador/partido/
-		 /administrador/candidato/
+## 🔒 Seguridad
 
-puse la vista del administrador
-		/administrador
+- 🔑 Autenticación de usuarios
+- 🛡️ Protección de sesiones
+- 🔐 Validación de acceso
+- 📄 Integridad de información
+- 👨‍💻 Gestión de privilegios
 
-solo me falta editar y eliminar  candidatos
+---
 
+# 🛠️ Tecnologías utilizadas
 
+## 🌐 Backend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=php,laravel" />
+</p>
+
+- PHP
+- Laravel
+- Blade Templates
+- MVC
+
+---
+
+## 🗄️ Base de datos
+
+<p>
+  <img src="https://skillicons.dev/icons?i=mysql" />
+</p>
+
+- MySQL
+- SQL
+- Gestión relacional
+
+---
+
+## 🎨 Frontend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap" />
+</p>
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+
+---
+
+## 🐳 Herramientas
+
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode" />
+</p>
+
+- Git
+- GitHub
+- VS Code
+
+---
+
+# 📂 Estructura del proyecto
+
+```bash
+VotaMX/
+│
+├── app/
+│   ├── views/
+│   │   ├── administrador/
+│   │   ├── votante/
+│   │   ├── funcionariosdecasilla/
+│   │   ├── reportes/
+│   │   └── layouts/
+│
+├── public/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── database/
+│   └── DBSistema.sql
+│
+└── README.md
+```
+
+---
+
+# ⚡ Instalación
+
+## 📋 Requisitos
+
+- PHP
+- Laravel
+- MySQL
+- Composer
+- Apache o Nginx
+
+---
+
+# 🚀 Configuración del proyecto
+
+## 1️⃣ Clonar repositorio
+
+```bash
+git clone https://github.com/usuario/votamx.git
+```
+
+---
+
+## 2️⃣ Entrar al proyecto
+
+```bash
+cd votamx
+```
+
+---
+
+## 3️⃣ Configurar base de datos
+
+```bash
+mysql -u root -p < DBSistema.sql
+```
+
+---
+
+## 4️⃣ Crear usuario de base de datos
+
+```sql
+CREATE USER 'seguridad'@'localhost' IDENTIFIED BY 'seguridad';
+
+GRANT ALL PRIVILEGES ON DBSistema.* TO 'seguridad'@'localhost';
+```
+
+---
+
+## 5️⃣ Ejecutar proyecto
+
+```bash
+php artisan serve
+```
+
+---
+
+# 👨‍💻 Usuario administrador
+
+## 🔑 Credenciales por defecto
+
+```bash
+Usuario: administrador
+Password: 123456
+```
+
+---
+
+# 🗳️ Módulos principales
+
+## 👨‍💼 Administrador
+
+- 📅 Crear jornadas
+- 📍 Registrar lugares
+- 🏢 Crear casillas
+- 🧑‍💼 Gestionar funcionarios
+- 🏛️ Registrar partidos
+- 👤 Registrar candidatos
+
+---
+
+## 🧑‍💼 Funcionarios de casilla
+
+- 🔑 Login de funcionarios
+- 📋 Validación de votantes
+- 🗳️ Supervisión electoral
+
+---
+
+## 🗳️ Votante
+
+- 🔑 Validación con clave electoral
+- 👤 Visualización de candidatos
+- ✅ Confirmación de voto
+- 📄 Agradecimiento de participación
+
+---
+
+# 🎨 Layouts y vistas
+
+## 📂 Sistema de layouts Blade
+
+Para reutilizar plantillas:
+
+```php
+@extends('layouts.layoutbase')
+
+@section('body')
+    <!-- HTML -->
+@endsection
+```
+
+---
+
+## ⚡ Secciones disponibles
+
+```php
+@section('css')
+@endsection
+
+@section('javascript')
+@endsection
+```
+
+---
+
+# 🔄 Flujo Git recomendado
+
+## 📥 Descargar cambios
+
+```bash
+git pull
+```
+
+---
+
+## 📤 Subir cambios
+
+```bash
+git status
+git add *
+git commit -m "mensaje"
+git push
+```
+
+---
+
+# 📸 Vista previa
+
+<div align="center">
+
+<img width="1000" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop" />
+
+</div>
+
+---
+
+# 🧠 Objetivos del proyecto
+
+## 🎯 Aprender y practicar
+
+- Laravel
+- Sistemas electorales
+- Seguridad web
+- MySQL
+- Blade Templates
+- Arquitectura MVC
+- Gestión de usuarios
+
+---
+
+# 🚧 Roadmap
+
+## 🔮 Próximas mejoras
+
+- 📱 Aplicación móvil
+- 🔐 Doble autenticación
+- ☁️ Deploy cloud
+- 📊 Dashboard avanzado
+- 🧠 IA para análisis electoral
+- 📄 Reportes PDF
+- 🌎 Multi-región
+
+---
+
+# 🤝 Contribuciones
+
+Las contribuciones son bienvenidas ❤️
+
+## Cómo contribuir
+
+1. Fork del proyecto
+
+```bash
+git checkout -b feature/nueva-funcionalidad
+```
+
+2. Commit
+
+```bash
+git commit -m "✨ Nueva funcionalidad"
+```
+
+3. Push
+
+```bash
+git push origin feature/nueva-funcionalidad
+```
+
+4. Pull Request 🚀
+
+---
+
+# 👨‍💻 Autor
+
+<div align="center">
+
+## VotaMX — Plataforma de votaciones electrónicas
+
+Sistema desarrollado para la administración moderna de procesos electorales digitales 🇲🇽
+
+</div>
+
+---
+
+# 🌟 Apoya el proyecto
+
+⭐ Dale una estrella  
+🍴 Haz fork  
+📢 Comparte el proyecto
+
+---
+
+# 📜 Licencia
+
+Proyecto educativo desarrollado para prácticas de sistemas electorales, seguridad informática y plataformas de votación electrónica.
+
+---
+
+<div align="center">
+
+### 🗳️ VotaMX — tecnología aplicada a procesos electorales modernos 🚀
+
+</div>
